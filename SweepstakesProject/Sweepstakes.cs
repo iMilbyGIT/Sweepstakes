@@ -8,9 +8,9 @@ namespace SweepstakesProject
 {
     public class Sweepstakes
     {
-        Dictionary<string, Sweepstakes> sweepDict = new Dictionary<string, Sweepstakes>();
+
         public Contestant contestant;
-        public Sweepstakes sweepstakes;       
+        IDictionary<int, string> sweepDict = new Dictionary<int, string>();
 
         public Sweepstakes(string name)
         {
