@@ -8,5 +8,6 @@ namespace SweepstakesProject
 {
     class MarketingFirm
     {
+        ISweepstakesManager SweepstakesManager;
     }
 }

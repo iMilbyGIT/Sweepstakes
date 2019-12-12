@@ -9,7 +9,7 @@ namespace SweepstakesProject
 {
     abstract class SweepstakesStackManager : ISweepstakesManager
     {
-        Stack stack = new Stack();
+        Stack<string> stack = new Stack<string>();
 
         public abstract Sweepstakes GetSweepstakes();
         public abstract void InsertSweepstakes(Sweepstakes sweepstakes);
