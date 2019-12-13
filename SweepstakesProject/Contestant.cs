@@ -17,7 +17,7 @@ namespace SweepstakesProject
         private string emailAddress;
         private int regNumber = 1;
         public List<Contestant> contestants = new List<Contestant>();
-        //    public Contestant contestant = new Contestant();
+        // public Contestant contestant = new Contestant();
 
         public Contestant(string firstName, string lastName, string emailAddress, int regNumber)
         {
