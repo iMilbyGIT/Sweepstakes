@@ -9,19 +9,14 @@ namespace SweepstakesProject
 {
     abstract class SweepstakesQueueManager : ISweepstakesManager
     {
+        Queue<Sweepstakes> SweepQueue = new Queue<Sweepstakes>();
         public Sweepstakes GetSweepstakes()
         {
-            Queue SweepQueue = new Queue();
-            SweepQueue.Enqueue("Sweepstake1");
-            return SweepQueue
+            return SweepQueue.Dequeue();
         }
-
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            Queue SweepQueue = new Queue();
-            SweepQueue.Enqueue("Sweepstake1");
-            SweepQueue.Enqueue("Sweetsteak2");
-            SweepQueue.Enqueue("Sleepstate3");
+            SweepQueue.Enqueue(sweepstakes);
         }
     }
 
