@@ -8,47 +8,38 @@ namespace SweepstakesProject
 {
     public class Sweepstakes
     {
-        public string name;
+        private string name;
         public Contestant contestant;
-        IDictionary<int, string> sweepDict = new Dictionary<int, string>();
-
+        Dictionary<int, string> dict = new Dictionary<int, string>();
         public string Name
         {
             get
             {
                 return name;
             }
-
-            set
-            {
-                name = value;
-            }
         }
         public Sweepstakes(string name)
         {
             this.name = name;
         }
-
-        public string PickWinner(List<Contestant> contestants)
+        public string PickWinner(Contestant contestant)
         {
             var random = new Random();
-            int index = random.Next(contestants.Count);
-            Console.WriteLine(contestants[index]);
-            return contestants.ToString(); 
+            int index = random.Next(contestant.Count);
+            Console.WriteLine(contestant[index]);
+            return contestant.ToString(); 
         }
-
-        private void RegisterContestant(Contestant contestant)
+        public void RegisterContestant(Contestant contestant)
         {
-            contestant.AddContestant(contestant);
+            dict.Add(contestant.RegNumber, contestant.FirstName +" "+ contestant.LastName);
         }
-
-        private void PrintContestantInfo(Contestant contestant)
+        public void PrintContestantInfo(Contestant contestant)
         {
             Console.WriteLine(contestant.RegNumber);
             Console.WriteLine(contestant.FirstName);
             Console.WriteLine(contestant.LastName);
             Console.WriteLine(contestant.EmailAddress);
-            
+            Console.ReadLine();
         }
     }
 }

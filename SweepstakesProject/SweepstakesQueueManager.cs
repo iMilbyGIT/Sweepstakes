@@ -19,5 +19,4 @@ namespace SweepstakesProject
             SweepQueue.Enqueue(sweepstakes);
         }
     }
-
 }
