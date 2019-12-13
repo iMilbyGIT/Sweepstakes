@@ -17,6 +17,14 @@ namespace SweepstakesProject
             this.name = name;
         }
 
+        public string PickWinner(List<Contestant> contestants)
+        {
+            var random = new Random();
+            int index = random.Next(contestants.Count);
+            Console.WriteLine(contestants[index]);
+            return contestants.ToString(); 
+        }
+
         private void RegisterContestant(Contestant contestant)
         {
             contestant.AddContestant(contestant);
@@ -24,10 +32,11 @@ namespace SweepstakesProject
 
         private void PrintContestantInfo(Contestant contestant)
         {
+            Console.WriteLine(contestant.RegNumber);
             Console.WriteLine(contestant.FirstName);
             Console.WriteLine(contestant.LastName);
             Console.WriteLine(contestant.EmailAddress);
-            Console.WriteLine(contestant.RegNumber);
+            
         }
     }
 }

@@ -9,10 +9,11 @@ namespace SweepstakesProject
 {
     abstract class SweepstakesQueueManager : ISweepstakesManager
     {
-        Queue<string> queue = new Queue<string>();
-        Queue qt = new Queue();
+        Queue SweepQueue = new Queue();
         public abstract Sweepstakes GetSweepstakes();
+        //how to remove from a queue
         public abstract void InsertSweepstakes(Sweepstakes sweepstakes);
+        //how to add to to queue
     }
 
 }
