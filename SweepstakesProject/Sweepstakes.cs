@@ -12,6 +12,18 @@ namespace SweepstakesProject
         public Contestant contestant;
         IDictionary<int, string> sweepDict = new Dictionary<int, string>();
 
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
+        }
         public Sweepstakes(string name)
         {
             this.name = name;
