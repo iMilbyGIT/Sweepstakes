@@ -8,7 +8,7 @@ namespace SweepstakesProject
 {
     public class UserInterface
     {
-        static int regNum = 0;
+        static int regNumber = 0;
         public static string GetFirstName()
         {
             Console.WriteLine("What is your first name?");
@@ -29,9 +29,9 @@ namespace SweepstakesProject
 
         public static int GetRegNumber()
         {
-            regNum += 1;
-            Console.WriteLine("Your registered number is: " + regNum);
-            return regNum;
+            regNumber += 1;
+            Console.WriteLine("Your registered number is: " + regNumber);
+            return regNumber;
         }
     }
 }
