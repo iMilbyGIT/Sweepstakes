@@ -8,16 +8,12 @@ namespace SweepstakesProject
 {
     public class Contestant
     {
-        //    public string FirstName { get; set; }
-        //    public string LastName { get; set; }
-        //    public string EmailAddress { get; set; }
-        //    public int RegNumber { get; set; }
         private string firstName;
         private string lastName;
         private string emailAddress;
-        private int regNumber = 1;
-        public List<Contestant> contestants = new List<Contestant>();
-        // public Contestant contestant = new Contestant();
+        private int regNumber;
+        public List<Contestant> contestants;
+        public Contestant contestant;
 
         public Contestant(string firstName, string lastName, string emailAddress, int regNumber)
         {
@@ -34,49 +30,45 @@ namespace SweepstakesProject
         {
             get 
             {
-                return this.firstName;
+                return firstName;
             }
             set
             {
-                this.firstName = value;
+                firstName = value;
             }
         }
         public string LastName
         {
             get
             {
-                return this.lastName;
+                return lastName;
             }
             set
             {
-                this.lastName = value;
+                lastName = value;
             }
         }
         public string EmailAddress
         {
             get
             {
-                return this.emailAddress;
+                return emailAddress;
             }
             set
             {
-                this.emailAddress = value;
+                emailAddress = value;
             }
         }
         public int RegNumber
         {
             get
             {
-                return this.regNumber;
+                return regNumber;
             }
             set
             {
-                this.regNumber = regNumber++;
+                regNumber = regNumber++;
             }
         }
-        //public int GenerateRegNumber()
-        //{
-        //    return this.regNumber++;
-        //}
     }
 }

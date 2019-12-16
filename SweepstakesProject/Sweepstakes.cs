@@ -22,11 +22,12 @@ namespace SweepstakesProject
         {
             this.name = name;
         }
-        public string PickWinner(Contestant contestant)
+
+        public string PickWinner(List<Contestant> contestants)
         {
-            var random = new Random();
-            int index = random.Next(contestant.Count);
-            Console.WriteLine(contestant[index]);
+            Random random = new Random();
+            int index = random.Next(contestants.Count);
+            Console.WriteLine(contestants[index]);
             return contestant.ToString(); 
         }
         public void RegisterContestant(Contestant contestant)
